@@ -17,10 +17,9 @@ ENV PATH="/.cargo/bin:$PATH"
 
 RUN dx bundle --web --release
 
-FROM chef AS runtime
-COPY --from=builder /app/target/dx/oneprog-main/release/web/ /usr/local/app
+FROM caddy:alpine AS runtime
 
-ENV PORT=8080
-ENV IP=0.0.0.0
+COPY --from=builder /app/target/dx/oneprog-main/release/web /srv
+COPY Caddyfile /etc/caddy/Caddyfile
 
-EXPOSE 8080
+EXPOSE 80
