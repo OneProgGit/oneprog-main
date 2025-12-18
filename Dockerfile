@@ -17,9 +17,10 @@ ENV PATH="/.cargo/bin:$PATH"
 
 RUN dx bundle --web --release
 
-FROM caddy:alpine AS runtime
+FROM python:3.13-alpine
 
-COPY --from=builder /app/target/dx/oneprog-main/release/web /srv
-COPY Caddyfile /etc/caddy/Caddyfile
+WORKDIR /srv
+COPY --from=builder /app/target/dx/*/web /srv
 
-EXPOSE 80
+EXPOSE 8080
+CMD ["python", "-m", "http.server", "8080", "--bind", "127.0.0.1"]
