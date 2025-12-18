@@ -20,7 +20,7 @@ RUN dx bundle --web --release
 FROM python:3.13-alpine
 
 WORKDIR /srv
-COPY --from=builder /app/target/dx/*/web /srv
+COPY --from=builder /app/target/dx/oneprog-main/web /srv
 
 EXPOSE 8080
 CMD ["python", "-m", "http.server", "8080", "--bind", "127.0.0.1"]
