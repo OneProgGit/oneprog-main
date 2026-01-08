@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM rust:1.92 AS chef
+FROM --platform=$TARGETPLATFORM  rust:1.92 AS chef
 RUN cargo install cargo-chef
 WORKDIR /app
 
