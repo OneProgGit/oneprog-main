@@ -12,7 +12,7 @@ RUN cargo chef cook --release --recipe-path recipe.json
 COPY . .
 
 RUN curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
-RUN cargo install dioxus-cli --root /.cargo -y --force
+RUN cargo install dioxus-cli --root /.cargo --locked --force
 ENV PATH="/.cargo/bin:$PATH"
 
 RUN dx bundle --web --release
