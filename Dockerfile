@@ -12,7 +12,7 @@ RUN cargo chef cook --release --recipe-path recipe.json
 COPY . .
 
 RUN apt-get update && apt-get install -y --no-install-recommends binaryen ca-certificates && rm -rf /var/lib/apt/lists/*
-RUN cargo install dioxus-cli --root /.cargo --locked --force
+RUN cargo binstall dioxus-cli --root /.cargo -y --force
 ENV PATH="/.cargo/bin:$PATH"
 
 RUN dx bundle --web --release
