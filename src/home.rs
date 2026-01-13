@@ -13,11 +13,11 @@ pub fn Home() -> Element {
                 h1 { class: "text-4xl font-bold", {format!("OneProg Главная v{VERSION}")} }
             }
             div { class: "flex flex-row gap-5 m-2 items-start jusify-start",
-                button { class: "btn btn-primary",
-                    a { href: "https://git.oneprog.org", "Github" }
-                }
-                button { class: "btn btn-primary",
-                    a { href: "https://code.oneprog.org", "Контест" }
+                a { class: "btn btn-primary", href: "https://git.oneprog.org", "Github" }
+                a {
+                    class: "btn btn-primary",
+                    href: "https://code.oneprog.org",
+                    "Контест"
                 }
             }
         }
