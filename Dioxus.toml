@@ -1,7 +1,7 @@
 [application]
 
 [web.app]
-title = "oneprog-main"
+title = "OneProg Главная"
 
 [web.resource]
 style = []

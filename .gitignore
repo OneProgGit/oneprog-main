@@ -1,5 +1,3 @@
-# Rust
 /target
-
-# Js
 /node_modules
+/assets/tailwind.css
