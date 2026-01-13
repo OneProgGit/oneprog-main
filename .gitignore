@@ -1,6 +1,5 @@
 /target
 /public
-/server
 /node_modules
 /assets/tailwind.css
 .env
