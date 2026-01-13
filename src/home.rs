@@ -16,8 +16,8 @@ pub fn Home() -> Element {
                 button { class: "btn btn-primary",
                     a { href: "https://git.oneprog.org", "Github" }
                 }
-                button { class: "btn btn-disabled", disabled: "true",
-                    "Контест (временно недоступен)"
+                button { class: "btn btn-primary",
+                    a { href: "https://code.oneprog.org", "Контест" }
                 }
             }
         }
