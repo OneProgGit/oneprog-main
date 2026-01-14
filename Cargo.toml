@@ -5,10 +5,11 @@ authors = ["OneProg <jade.weirdo@gmail.com>"]
 edition = "2024"
 
 [dependencies]
-dioxus = { version = "0.7.2", features = [] }
+dioxus = { version = "0.7.2", features = ["fullstack"] }
 
 [features]
 default = ["web"]
 web = ["dioxus/web"]
 desktop = ["dioxus/desktop"]
 mobile = ["dioxus/mobile"]
+server = ["dioxus/server"]
