@@ -20,7 +20,7 @@ pub fn Home() -> Element {
                 }
                 a {
                     class: "btn btn-primary",
-                    href: "https://code.oneprog.org",
+                    href: "https://contest.oneprog.org",
                     "Контест"
                 }
             }
