@@ -1,7 +1,8 @@
-use crate::home::Home;
+use crate::{footer::Footer, navbar::Navbar};
 use dioxus::prelude::*;
 
-mod home;
+mod footer;
+mod navbar;
 
 const TAILWIND_CSS: Asset = asset!("/assets/tailwind.css");
 
@@ -13,6 +14,7 @@ fn main() {
 fn App() -> Element {
     rsx! {
         document::Link { rel: "stylesheet", href: TAILWIND_CSS }
-        Home {}
+        Navbar {}
+        Footer {}
     }
 }
