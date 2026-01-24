@@ -14,7 +14,10 @@ fn main() {
 fn App() -> Element {
     rsx! {
         document::Link { rel: "stylesheet", href: TAILWIND_CSS }
-        Navbar {}
-        Footer {}
+
+        div { class: "flex flex-col gap-4 m-2",
+            Navbar {}
+            Footer {}
+        }
     }
 }
