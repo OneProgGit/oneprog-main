@@ -1,6 +1,6 @@
 [package]
 name = "oneprog-main"
-version = "1.0.2-1"
+version = "1.0.3"
 authors = ["OneProg <jade.weirdo@gmail.com>"]
 edition = "2024"
 
