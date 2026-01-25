@@ -4,7 +4,7 @@ use dioxus::prelude::*;
 pub fn Navbar() -> Element {
     const VERSION: &str = env!("CARGO_PKG_VERSION");
     rsx! {
-        div { class: "flex flex-col gap-4 items-start justify-start",
+        div { class: "flex flex-col flex-1 gap-4 items-start justify-start",
             div {
                 class: "navbar bg-base-200 flex flex-col gap-5 items-start justify-start",
                 id: "navbar",

@@ -15,7 +15,7 @@ fn App() -> Element {
     rsx! {
         document::Link { rel: "stylesheet", href: TAILWIND_CSS }
 
-        div { class: "flex flex-col gap-4 m-2",
+        div { class: "flex flex-col min-h-screen gap-4 mx-2 items-start justify-start",
             Navbar {}
             Footer {}
         }
